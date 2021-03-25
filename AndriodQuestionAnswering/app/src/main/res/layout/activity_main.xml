@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#2F4F4F" >
+
+    <!-- Top header-->
+    <RelativeLayout
+        android:id="@+id/window_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#7B68EE">
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="#F0FFFF"
+            android:text="System Online"/>
+    </RelativeLayout>
+
+
+    <!-- List of messages -->
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/window_bottom"
+        android:layout_below="@id/window_top"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+
+        android:transcriptMode="alwaysScroll"
+        android:scrollingCache="false"
+        android:listSelector="#00000000"
+        android:divider="#00000000"
+        android:dividerHeight="2dp"
+        android:scrollbars="none"/>
+
+
+    <!-- input and button -->
+    <RelativeLayout
+        android:id="@+id/window_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_width="fill_parent"
+        android:background="#7B68EE"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/editor"
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/send_btn"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:singleLine="true"
+            android:textSize="18sp"
+            android:layout_toStartOf="@id/send_btn" />
+
+        <Button
+            android:id="@+id/send_btn"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:textAllCaps="false"
+            android:text="Send"
+            android:textSize="17sp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
